@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script defer src="/scripts/landingSlider.js"></script>
+    <title>MaPartments Kraków</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="#apartamenty">apatamenty</a></li>
+        <li><a class="nav-link nav-link-highlight" href="#kontakt">kontakt</a></li>
+      </ul>
+    </nav>
+    <section>
+      <header>
+        <img class="logo" src="assets/icons/logo.svg" alt="MaPartments logo" />
+        <h1>apartamenty dla <span>Ciebie</span></h1>
+      </header>
+      <div class="landing-slider">
+        <img src="assets/photos/landing-slider.jpg" alt="zdjęcia apartamentów">
+      </div>
+    </section>
+    <section class="locations">
+      <h2>Lokalizacje apartamentów</h2>
+      <div class="location">
+        <img src="assets/photos/podgórze.jpg" alt="zdjęcie podgórze" />
+        <div class="location-text-container">
+          <h3>Podgórze</h3>
+          <p>
+            Podgórze to wyjątkowe miejsce na mapie miasta. Stanowi wciąż cichą i spokojną enklawę pozwalającą odpocząć
+            po dniu spędzonym w pracy i/lub w zgiełku Starego Miasta czy Kazimierza. Bogate we własną historię stanowi
+            idealne miejsce startu „wypraw” do Centrum, na Wawel, do Sanktuarium Bożego Miłosierdza w Łagiewnikach, czy
+            do unikatowej na światową skalę Kopalni Soli w Wieliczce!
+          </p>
+          <a href="/mapa-podgorze">apartament MaPa Podgórze ➞</a>
+        </div>
+      </div>
+      <div class="location">
+        <img src="assets/photos/kazimierz.jpg" alt="zdjęcie kazimierz" />
+        <div class="location-text-container">
+          <h3>Kazimierz</h3>
+          <p>
+            Kazimierz to wyjątkowa dzielnica nawet na skalę tak niesamowitego miasta jakim jest Kraków. Jej bogata, a
+            zarazem tragiczna historia sprawiła, że powstało miejsce o unikalnej atmosferze. Pełna pamiątek z czasów,
+            gdy stanowiła żydowską enklawę, tętni życiem pełna małych sklepików, galerii, warsztatów, knajpek i
+            wystawnych restauracji. Wkroczysz w jej serce zaledwie przechodząc na drugą stronę ulicy!
+          </p>
+          <a href="/mapa-kazimierz">apartament MaPa Kazimierz ➞</a>
+        </div>
+      </div>
+    </section>
+    <section id="apartamenty" class="apartments">
+      <div class="apartments-card">
+        <h3>MaPa Podgórze</h3>
+        <ul>
+          <li><img src="assets/icons/distance.svg" alt="ikonka odległości" /> 2.9km od Rynku Głównego</li>
+          <li><img src="assets/icons/kitchen.svg" alt="ikonka kuchni" /> wyposażona kuchnia</li>
+          <li><img src="assets/icons/wifi.svg" alt="ikonka wifi" /> dostęp do wifi i Netflix</li>
+          <li><img src="assets/icons/person.svg" alt="ikonka osób" />do 4 osób</li>
+        </ul>
+        <a href="/mapa-podgórze">więcej informacji</a>
+      </div>
+      <img class="apartments-image" src="./assets/photos/mapa-gold.jpg" alt="" />
+      <div class="apartments-controls">
+        <button id="apartments-next" class="apartments-arrow">
+          <img src="assets/icons/arrow-up.svg" alt="strałka do góry" />
+        </button>
+        <div class="apartments-dots">
+          <button class="dot dot-active"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
+        <button id="apartments-next" class="apartments-arrow">
+          <img src="assets/icons/arrow-down.svg" alt="strałka na dół" />
+        </button>
+      </div>
+    </section>
+    <section class="reviews">
+      <h2>Zadowoleni goście</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <img src="assets/photos/avatar1.svg" alt="avatar1" />
+          <h3>Sabina</h3>
+          <p>
+            Serdecznie polecam, apartament jest najwyższej jakości, czysto i pełne wyposażenie. Kontakt z właścicielem
+            przebiegał bardzo dobrze i sprawnie, wszystkie informacje zostały dostarczone. Osiedle nowoczesne i
+            spokojne.
+          </p>
+        </div>
+        <div class="review">
+          <img src="assets/photos/avatar2.svg" alt="avatar1" />
+          <h3>Monika</h3>
+          <p>
+            Bardzo komfortowy i nowoczesny apartament. Wystarczająca przestrzeń dla rodziny 4-osobowej. Bardzo dobry
+            kontakt z właścicielem, jasne wskazówki odnośnie trafienia do lokum oraz dot. dobrych restauracji w okolicy.
+          </p>
+        </div>
+        <div class="review">
+          <img src="assets/photos/avatar3.svg" alt="avatar1" />
+          <h3>Iwona</h3>
+          <p>
+            Mimo późnego przyjazdu (1:20) odbiór kluczy nie stanowił żadnego problemu. Świetna lokalizacja, bardzo
+            przyjazna obsługa. Byliśmy z dzieckiem, pełny komfort i wspaniały wystrój. Polecamy :)
+          </p>
+        </div>
+        <span
+          >więcej opinii na
+          <a target="_blank" href="https://www.booking.com/hotel/pl/mapa.pl.html">Booking.com</a></span
+        >
+      </div>
+    </section>
+    <hr/>
+    <section class="furnishings">
+      <div class="furnishings-text-container">
+        <h2>Wyposażenie zapewniające komfort</h2>
+        <p>
+          Wybierając i przygotowując Apartamenty dla Państwa wykorzystujemy własne doświadczenia z licznych podróży po
+          całej Europie. Dlatego w Apartamentach MaPa znajdą Państwo wszystko co konieczne dla komfortowego i
+          beztroskiego pobytu. Bez względu na cel wizyty w Krakowie - czy jest to jednodniowy postój na długiej trasie,
+          wyjazd służbowy, czy kilkudniowy pobyt ze zwiedzaniem naszego wyjątkowego miasta!
+        </p>
+      </div>
+      <img src="assets/photos/furnishings.jpg" alt="kuchnia" />
+    </section>
+    <section id="kontakt" class="contact">
+      <h2>Kontakt i rezerwacje bezpośrednie</h2>
+      <div class="contact-container">
+        <div class="contact-text-container">
+          <span>Telefon i WhatsApp:</br><a href="tel:+48795379081">+48 795 379 081</a></span>
+          <span>Email:</br><a href="mailto:biuro@mapartments.krakow.pl">biuro@mapartments.krakow.pl</a></span>
+        </div>
+        <img src="assets/icons/telephone-graphic.svg" alt="grafika telefonu">
+      </div>
+    </section>
+    <footer>
+      <img src="assets/icons/logo-whte.svg" alt="białe logo MaPartments">
+      <div class="footer-links-container">
+        <a href="/mapa-podgorze">MaPa Podgórze</a>
+        <a href="/mapa-kazimierz">MaPa Kazimierz</a>
+        <a target="_blank" href="https://github.com/oliwierzgorniak/mapartments">o stronie</a>
+      </div>
+    </footer>
+  </body>
+</html>

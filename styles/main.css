@@ -1,0 +1,646 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(../assets/fonts/playfair-display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+:root {
+  --purple: #7a3f86;
+  --gold: #c98718;
+  --white: #ffffff;
+  --darker-white: #f6f6f6;
+  /* --darker-white: #c2c2c2; */
+  --green: #005d74;
+  --light-gray: #d9d9d9;
+  --dark-gray: #5d5958;
+  --screen-padding-x: 6rem;
+  /* --section-separation: 10vw; */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: var(--darker-white);
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* nav */
+nav {
+  display: flex;
+  margin: 2vw var(--screen-padding-x) 0 var(--screen-padding-x);
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  gap: 0 2.5em;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-link {
+  color: var(--purple);
+  font-size: 1.6rem;
+}
+
+.nav-link-highlight {
+  border: 2px solid var(--purple);
+  padding: 0.7em 1.1em;
+}
+
+/* header */
+header {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 6vw auto;
+  gap: 0;
+}
+
+h1 {
+  text-align: end;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 4.2rem;
+  letter-spacing: 2px;
+}
+
+h1 span {
+  color: var(--gold);
+}
+
+.logo {
+  width: 30vw;
+}
+
+/* Copyright (c) 2022 by Chris Coyier  (https://codepen.io/chriscoyier/pen/EyxPPm)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ */
+
+.landing-slider {
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.landing-slider img {
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+  margin: 0;
+  animation: landing-slider-move 25s linear infinite;
+}
+
+@keyframes landing-slider-move {
+  to {
+    transform: translateX(-66.66%);
+  }
+}
+
+/* locations */
+.locations {
+  padding: 8vw 0;
+  background: var(--white);
+}
+
+.locations h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 3.1rem;
+  text-align: center;
+  margin: 0 1.4em 1.3em 1.4em;
+  letter-spacing: 1px;
+}
+
+.location {
+  max-width: 1100px;
+  padding: 0 var(--screen-padding-x);
+  display: flex;
+  gap: 3vw;
+  margin: 0 auto 6em auto;
+}
+
+.location:last-child {
+  margin-bottom: 0;
+}
+
+.location img {
+  height: 100%;
+  width: 40vw;
+  max-width: 400px;
+}
+
+.location h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 2.6rem;
+  margin: 0 0 0.8em 0;
+}
+
+.location p {
+  line-height: 150%;
+  margin-bottom: 2.5em;
+}
+
+.location a {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.9em;
+  font-size: 1.4rem;
+  color: var(--purple);
+}
+
+/* apartments */
+.apartments {
+  width: min-content;
+  margin: 6vw auto;
+  padding: 0 var(--screen-padding-x);
+  display: flex;
+  align-items: center;
+
+  /* correction after card transform */
+  transform: translateX(-0.8vw);
+}
+
+.apartments-card {
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  border: 2px solid var(--green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.7em 2.8em;
+  transform: translateX(3vw);
+  background: white;
+}
+
+.apartments-card h3 {
+  font-size: 2.7rem;
+  font-family: "Playfair Display";
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.9em;
+}
+
+.apartments-card ul {
+  padding: 0;
+  margin-bottom: 2.2em;
+}
+
+.apartments-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 1.2em;
+  font-size: 1.3rem;
+}
+
+.apartments-card img {
+  height: 1.4em;
+}
+
+.apartments-card a {
+  background-color: var(--gold);
+  color: white;
+  padding: 0.8em 1em;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.apartments-image {
+  width: 50vw;
+}
+
+.apartments button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.apartments-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.apartments-arrow {
+  height: 3em;
+}
+
+.apartments-arrow img {
+  height: 100%;
+}
+
+.apartments-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em 0;
+  margin: 1.3em 0;
+}
+
+.apartments .dot {
+  background: var(--light-gray);
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+}
+
+.apartments .dot-active {
+  background: var(--green);
+}
+
+/* reviews */
+.reviews {
+  text-align: end;
+  margin: 6vw 0;
+}
+
+.reviews h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2.2em 1.4em 1.4em 1.4em;
+}
+
+.reviews-container {
+  margin: 0 var(--screen-padding-x);
+  display: flex;
+  justify-content: center;
+  gap: 3em 4vw;
+  position: relative;
+  padding-bottom: 3em;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--green);
+  padding: 4em 3.2em;
+  text-align: center;
+  line-height: 150%;
+}
+
+.review img {
+  width: 4em;
+}
+
+.review h3 {
+  font-weight: 500;
+  margin-bottom: 1.1em;
+  font-size: 1.6rem;
+}
+
+.reviews span,
+.reviews a {
+  color: var(--dark-gray);
+}
+
+.reviews span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+hr {
+  width: 72vw;
+  border-top: 1px solid var(--dark-gray);
+  border-bottom: none;
+}
+
+/* furnishings */
+.furnishings {
+  padding: 6vw var(--screen-padding-x);
+  display: flex;
+  flex-direction: column;
+}
+
+.furnishings-text-container {
+  width: 50vw;
+  line-height: 170%;
+  align-self: flex-end;
+  margin-bottom: 3.5em;
+  font-size: 1.3rem;
+}
+
+.furnishings-text-container h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.furnishings img {
+  width: 50vw;
+}
+
+/* contact */
+.contact {
+  margin: 0 auto;
+  padding: 6vw var(--screen-padding-x) 6vw var(--screen-padding-x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+}
+
+.contact h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
+  margin: 0 1.4em 2em 1.4em;
+}
+
+.contact-container {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 4vw;
+  gap: 0 6em;
+  align-items: center;
+}
+
+.contact span {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  line-height: 170%;
+}
+
+.contact-text-container span:first-child {
+  margin-bottom: 1.7em;
+}
+
+.contact a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.6rem;
+  color: var(--gold);
+}
+
+.contact img {
+  width: 30vw;
+}
+
+/* footer */
+footer {
+  background: var(--dark-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em var(--screen-padding-x);
+}
+
+.footer-links-container a {
+  color: white;
+  margin-left: 1em;
+}
+
+/* responsivnes */
+h2 {
+  line-height: 130%;
+}
+
+/* contact */
+@media screen and (max-width: 1185px) {
+  :root {
+  }
+
+  .review:nth-child(3) {
+    display: none;
+  }
+  .contact-text-container span {
+    font-size: 1.6rem;
+  }
+
+  .contact-text-container a {
+    font-size: 2.1rem;
+  }
+
+  /* apatments */
+  .apartments-card h3 {
+    font-size: 2rem;
+  }
+
+  .apartments-card li {
+    font-size: 1.2rem;
+  }
+
+  .apartments-card a {
+    font-size: 1.4rem;
+  }
+
+  .apartments-image {
+    width: 41vw;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .contact-text-container span {
+    font-size: 1.2rem;
+  }
+
+  .contact-text-container a {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  /* locations */
+  .location {
+    flex-direction: column;
+  }
+
+  .location img {
+    width: 80vw;
+  }
+
+  .location-text-container {
+    margin-left: 4em;
+  }
+
+  /* apartments */
+  .apartments {
+    flex-direction: column;
+    align-items: center;
+    margin: 9vw auto;
+  }
+
+  .apartments-card {
+    transform: translateX(0) translateY(-20px);
+  }
+
+  .apartments-image {
+    order: -1;
+    width: 60vw;
+    max-width: 400px;
+  }
+
+  .apartments-controls {
+    flex-direction: row;
+    gap: 0 1.6em;
+  }
+
+  .apartments-arrow {
+    transform: rotate(-90deg);
+  }
+
+  .apartments-dots {
+    flex-direction: row;
+    gap: 0 0.6em;
+  }
+
+  /* contacts */
+  .contact h2 {
+    margin-bottom: 1.6em;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 5.5em 0;
+  }
+
+  .contact-text-container {
+    order: 2;
+  }
+
+  .contact-text-container span {
+    font-size: 1.6rem;
+  }
+
+  .contact-text-container a {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    padding: 8vw 0;
+  }
+
+  .locations {
+    padding: 11vw 0;
+  }
+
+  .apartments {
+    padding: 6vw 0 0 0;
+  }
+
+  .reviews {
+    padding-bottom: 10vw;
+  }
+
+  .furnishings {
+    margin: 7vw auto;
+  }
+
+  .furnishings-text-container {
+    margin-bottom: 1em;
+  }
+
+  .contact {
+    padding: 9vw 0;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  /* footer */
+  footer {
+    flex-direction: column;
+    gap: 3em 0;
+  }
+
+  .footer-links-container a:first-child {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.1rem !important;
+  }
+
+  /* locations  */
+
+  .locations img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .location-text-container {
+    margin-left: 0;
+  }
+
+  .locations h3 {
+    font-size: 1.9rem;
+  }
+
+  /* furninsings */
+
+  .furnishings-text-container {
+    width: 100%;
+  }
+
+  .furnishings p {
+    font-size: 1rem;
+    line-height: 160%;
+  }
+
+  .furnishings img {
+    width: 100%;
+  }
+
+  /* conatact */
+
+  .contact span {
+    font-size: 1.4rem;
+  }
+
+  .contact a {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  :root {
+    --screen-padding-x: 2em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+}
