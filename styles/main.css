@@ -10,6 +10,7 @@
 
 :root {
   --purple: #7a3f86;
+  --purple-hover: #45224b;
   --gold: #c98718;
   --white: #ffffff;
   --darker-white: #f6f6f6;
@@ -59,11 +60,23 @@ li {
 .nav-link {
   color: var(--purple);
   font-size: 1.6rem;
+  transition: all 0.2s ease-out;
+}
+
+.nav-link:hover {
+  transform: translateY(1em);
+  color: var(--purple-hover);
 }
 
 .nav-link-highlight {
   border: 2px solid var(--purple);
   padding: 0.7em 1.1em;
+}
+
+.nav-link-highlight:hover {
+  background-color: var(--purple-hover);
+  border: 2px solid var(--purple-hover);
+  color: white;
 }
 
 /* header */
