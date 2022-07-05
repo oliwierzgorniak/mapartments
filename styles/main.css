@@ -12,6 +12,7 @@
   --purple: #7a3f86;
   --purple-hover: #45224b;
   --gold: #c98718;
+  --gold-hover: #9e6b12;
   --white: #ffffff;
   --darker-white: #f6f6f6;
   /* --darker-white: #c2c2c2; */
@@ -60,11 +61,10 @@ li {
 .nav-link {
   color: var(--purple);
   font-size: 1.6rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .nav-link:hover {
-  transform: translateY(1em);
   color: var(--purple-hover);
 }
 
@@ -185,6 +185,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   margin-bottom: 0.9em;
   font-size: 1.4rem;
   color: var(--purple);
+  transition: all 0.4s ease-out;
+}
+
+.location a:hover {
+  color: var(--purple-hover);
 }
 
 /* apartments */
@@ -210,6 +215,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 2.7em 2.8em;
   transform: translateX(3vw);
   background: white;
+}
+
+.apartments-card:nth-child(2) {
+  display: none;
 }
 
 .apartments-card h3 {
@@ -243,10 +252,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 0.8em 1em;
   font-size: 1.6rem;
   font-weight: 600;
+  /* transition: all 0.4s ease-out; */
+}
+
+.apartments a:hover {
+  background-color: var(--gold-hover);
 }
 
 .apartments-image {
   width: 50vw;
+}
+
+#next-image {
+  display: none;
 }
 
 .apartments button {
@@ -278,8 +296,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .apartments .dot {
   background: var(--light-gray);
-  width: 0.6em;
-  height: 0.6em;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
 }
 

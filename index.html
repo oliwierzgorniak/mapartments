@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <script defer src="/scripts/landingSlider.js"></script>
+    <script defer src="/scripts/apartmentsCaraousel.js"></script>
     <title>MaPartments Kraków</title>
   </head>
   <body>
@@ -55,23 +55,35 @@
     </section>
     <section id="apartamenty" class="apartments">
       <div class="apartments-card">
-        <h3>MaPa Podgórze</h3>
+        <h3 id="apartment-name">MaPa Podgórze</h3>
         <ul>
-          <li><img src="assets/icons/distance.svg" alt="ikonka odległości" /> 2.9km od Rynku Głównego</li>
-          <li><img src="assets/icons/kitchen.svg" alt="ikonka kuchni" /> wyposażona kuchnia</li>
-          <li><img src="assets/icons/wifi.svg" alt="ikonka wifi" /> dostęp do wifi i Netflix</li>
-          <li><img src="assets/icons/person.svg" alt="ikonka osób" />do 4 osób</li>
+          <li><img src="assets/icons/distance.svg" alt="ikonka odległości" /> <span id="apartment-distance">2.9km od Rynku Głównego</span> </li>
+          <li><img src="assets/icons/kitchen.svg" alt="ikonka kuchni" /> <span id="apartment-kitchen">wyposażona kuchnia</span></li>
+          <li><img src="assets/icons/wifi.svg" alt="ikonka wifi" /> <span id="apartment-wifi">dostęp do wifi i Netflix</span></li>
+          <li><img src="assets/icons/person.svg" alt="ikonka osób" /><span id="apartment-capacity">do 4 osób</span></li>
         </ul>
-        <a href="/mapa-podgorze">więcej informacji</a>
+        <a id="apartment-link" href="/mapa-podgorze">więcej informacji</a>
       </div>
-      <img class="apartments-image" src="./assets/photos/mapa-gold.jpg" alt="" />
+      <div id="next-apartment-card" class="apartments-card">
+        <h3 id="apartment-name">MaPa Kazimierz</h3>
+        <ul>
+          <li><img src="assets/icons/distance.svg" alt="ikonka odległości" /> <span id="apartment-distance">1.1km od Rynku Głównego</span> </li>
+          <li><img src="assets/icons/kitchen.svg" alt="ikonka kuchni" /> <span id="apartment-kitchen">wyposażona kuchnia</span></li>
+          <li><img src="assets/icons/wifi.svg" alt="ikonka wifi" /> <span id="apartment-wifi">dostęp do wifi</span></li>
+          <li><img src="assets/icons/person.svg" alt="ikonka osób" /><span id="apartment-capacity">do 4 dorosłych + 2 dzieci</span></li>
+        </ul>
+        <a id="apartment-link" href="/mapa-podgorze">więcej informacji</a>
+      </div>
+      
+      <img id="active-image" class="apartments-image" src="./assets/photos/mapa-podgorze.jpg" alt="apartament MaPa podgórze" />
+      <img id="next-image" class="apartments-image" src="./assets/photos/mapa-kazimierz.jpg" alt="apartament MaPa Kazmierze" />
       <div class="apartments-controls">
-        <button id="apartments-next" class="apartments-arrow">
+        <button id="apartments-previous" class="apartments-arrow">
           <img src="assets/icons/arrow-up.svg" alt="strałka do góry" />
         </button>
         <div class="apartments-dots">
-          <button class="dot dot-active"></button>
-          <button class="dot"></button>
+          <button class="dot dot-active" data-index="0"></button>
+          <button class="dot" data-index="1"></button>
         </div>
         <button id="apartments-next" class="apartments-arrow">
           <img src="assets/icons/arrow-down.svg" alt="strałka na dół" />
