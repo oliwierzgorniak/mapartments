@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   src: url(../assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   src: url(../assets/fonts/playfair-display/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
@@ -36,7 +36,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--darker-white);
   font-weight: 400;
   overflow-x: hidden;
@@ -92,7 +92,7 @@ header {
 h1 {
   text-align: end;
   margin: 0;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 4.2rem;
   letter-spacing: 2px;
@@ -140,7 +140,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .locations h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 3.1rem;
   text-align: center;
@@ -167,7 +167,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .location h3 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 2.6rem;
   margin: 0 0 0.8em 0;
@@ -179,7 +179,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .location a {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   display: block;
   margin-bottom: 0.9em;
@@ -205,7 +205,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .apartments-card {
-  width: min-content;
   height: min-content;
   white-space: nowrap;
   border: 2px solid var(--green);
@@ -213,17 +212,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   flex-direction: column;
   align-items: center;
   padding: 2.7em 2.8em;
-  transform: translateX(3vw);
+  /* transform: translateX(3vw); */
   background: white;
 }
 
-.apartments-card:nth-child(2) {
+#next-apartment-card {
   display: none;
 }
 
 .apartments-card h3 {
   font-size: 2.7rem;
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0.9em;
@@ -312,7 +311,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .reviews h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 3rem;
   text-align: center;
@@ -381,7 +380,7 @@ hr {
 }
 
 .furnishings-text-container h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 3rem;
   margin-top: 0;
@@ -402,7 +401,7 @@ hr {
 }
 
 .contact h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 3rem;
   text-align: center;
@@ -420,7 +419,7 @@ hr {
 
 .contact span {
   display: block;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
   line-height: 170%;
 }
@@ -430,13 +429,14 @@ hr {
 }
 
 .contact a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.6rem;
   color: var(--gold);
 }
 
-.contact img {
+.contact svg {
   width: 30vw;
+  height: 100%;
 }
 
 /* footer */
