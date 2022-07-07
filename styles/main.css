@@ -31,6 +31,7 @@
 
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -193,15 +194,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 /* apartments */
+
 .apartments {
   width: min-content;
   margin: 6vw auto;
   padding: 0 var(--screen-padding-x);
   display: flex;
   align-items: center;
+  position: relative;
 
   /* correction after card transform */
   /* transform: translateX(-2.8vw); */
+}
+
+/* https://teamtreehouse.com/community/local-anchor-links-with-padding */
+.apartments-anchor {
+  position: absolute;
+  top: -3em;
+  width: 3em;
 }
 
 .apartments-card {
