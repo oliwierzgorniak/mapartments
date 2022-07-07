@@ -201,7 +201,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   align-items: center;
 
   /* correction after card transform */
-  transform: translateX(-0.8vw);
+  /* transform: translateX(-2.8vw); */
 }
 
 .apartments-card {
@@ -212,8 +212,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   flex-direction: column;
   align-items: center;
   padding: 2.7em 2.8em;
-  /* transform: translateX(3vw); */
+  transform: translateX(3vw);
   background: white;
+  z-index: 10;
 }
 
 #next-apartment-card {

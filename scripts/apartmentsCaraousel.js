@@ -1,3 +1,8 @@
+// Copyright (c) 2022 by Adam (https://codepen.io/helloroman/pen/zYrQEwg)
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 const apartments = [
   {
     name: 'MaPa Podgórze',
@@ -6,6 +11,7 @@ const apartments = [
     wifi: 'dostęp do wifi i Netflix',
     capacity: 'do 4 osób',
     link: '/mapa-podgorze',
+    img: 'mapa-podgorze.jpg',
   },
   {
     name: 'MaPa Kazimierz',
@@ -14,20 +20,23 @@ const apartments = [
     wifi: 'dostęp do wifi',
     capacity: 'do 4 dorosłych + 2 dzieci',
     link: '/mapa-kazmierz',
+    img: 'mapa-kazimierz.jpg',
   },
 ];
 
 let activeIndex = 0;
 function chnageApartment(index) {
-  let apartmentsCards = document.querySelectorAll('.apartments-card');
-  apartmentsCards[0].style.display = index === 0 ? 'flex' : 'none';
-  apartmentsCards[1].style.display = index === 1 ? 'flex' : 'none';
+  const ANIMATION_DURATION = 1;
 
-  //   image
-  let nextImage = document.querySelector('#next-image');
-  let activeImage = document.querySelector('#active-image');
-  activeImage.id = 'next-image';
-  nextImage.id = 'active-image';
+  let card = document.querySelector('.apartments-card');
+  gsap.to(card, { opacity: 0, x: -400, duration: ANIMATION_DURATION, ease: 'easeIn' });
+  gsap.to(card, { opacity: 1, x: '2.8vw', duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeIn' });
+
+  let img = document.querySelector('.apartments-image');
+  gsap.to(img, { opacity: 0, y: -400, duration: ANIMATION_DURATION, ease: 'easeIn' });
+  gsap.to(img, { opacity: 1, y: 0, duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeIn' });
+
+  setTimeout(changeApartmentData, ANIMATION_DURATION * 1000);
 
   // dots
   let dots = document.querySelectorAll('.dot');
@@ -37,6 +46,34 @@ function chnageApartment(index) {
 
   dots[activeIndex].classList.add('dot-active');
 }
+
+function changeApartmentData() {
+  let card = document.querySelector('.apartments-card');
+
+  let name = card.querySelector('#apartment-name');
+  name.innerText = apartments[activeIndex].name;
+
+  let distance = card.querySelector('#apartment-distance');
+  distance.innerText = apartments[activeIndex].distance;
+
+  let kitchen = card.querySelector('#apartment-kitchen');
+  kitchen.innerText = apartments[activeIndex].kitchen;
+
+  let wifi = card.querySelector('#apartment-wifi');
+  wifi.innerText = apartments[activeIndex].wifi;
+
+  let capacity = card.querySelector('#apartment-capacity');
+  capacity.innerText = apartments[activeIndex].capacity;
+
+  let link = card.querySelector('#apartment-link');
+  link.href = apartments[activeIndex].link;
+
+  // image
+  let img = document.querySelector('.apartments-image');
+  img.src = '/assets/photos/' + apartments[activeIndex].img;
+}
+
+// listeners
 
 let arrowPrev = document.querySelector('#apartments-previous');
 arrowPrev.addEventListener('click', () => {

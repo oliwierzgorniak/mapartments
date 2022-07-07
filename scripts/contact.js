@@ -5,43 +5,39 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section');
 
-// sections.forEach(section => {
-//   gsap.fromTo(
-//     section.children,
-//     { y: '+=100', opacity: 0 },
-//     {
-//       y: 0,
-//       opacity: 1,
-//       stagger: 0.2,
-//       duration: 1,
-//       ease: 'easeInOut',
-//       scrollTrigger: {
-//         trigger: section,
-//         start: 'top 60%',
-//         markers: true,
-//       },
-//     },
-//   );
-// });
+sections.forEach(section => {
+  gsap.fromTo(
+    section.children,
+    { y: '+=100', opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.2,
+      duration: 1,
+      ease: 'easeInOut',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 60%',
+      },
+    },
+  );
+});
 
 // https://www.youtube.com/watch?v=LuWdeuPMHps
-
-const telephoneReceiver = document.querySelector('#telephone-receiver');
-
 gsap.fromTo(
-  telephoneReceiver,
+  '#telephone-receiver',
   { strokeDasharray: 1363, strokeDashoffset: 1363 },
   {
     strokeDashoffset: 0,
     stagger: 0.2,
     duration: 3,
+    delay: 0.5,
     ease: 'easeOut',
     scrollTrigger: {
-      trigger: '.contact',
-      start: 'top 65%',
-      markers: true,
+      trigger: '#telephone-receiver',
+      start: 'top 85%',
     },
   },
 );
