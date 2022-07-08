@@ -26,15 +26,15 @@ const apartments = [
 
 let activeIndex = 0;
 function chnageApartment(index) {
-  const ANIMATION_DURATION = 1;
+  const ANIMATION_DURATION = 0.6;
 
   let card = document.querySelector('.apartments-card');
   gsap.to(card, { opacity: 0, x: -400, duration: ANIMATION_DURATION, ease: 'easeIn' });
-  gsap.to(card, { opacity: 1, x: '2.8vw', duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeIn' });
+  gsap.to(card, { opacity: 1, x: '2.8vw', duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeOut' });
 
   let img = document.querySelector('.apartments-image');
   gsap.to(img, { opacity: 0, y: -400, duration: ANIMATION_DURATION, ease: 'easeIn' });
-  gsap.to(img, { opacity: 1, y: 0, duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeIn' });
+  gsap.to(img, { opacity: 1, y: 0, duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeOut' });
 
   setTimeout(changeApartmentData, ANIMATION_DURATION * 1000);
 
