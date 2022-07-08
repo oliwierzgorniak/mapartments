@@ -22,6 +22,7 @@
   --dark-gray: #5d5958;
   /* --section-separation: 10vw; */
   --slider-image-height: 450px;
+  --slider-arrow-width: 3.2em;
 }
 
 *,
@@ -123,7 +124,7 @@ li {
 
 .apartment {
   margin: 0 auto;
-  padding: 3em 2em;
+  padding: 3em unset;
   justify-content: center;
   display: flex;
   gap: 0 2.3em;
@@ -160,13 +161,14 @@ li {
 
 .slider {
   width: 100%;
-  max-width: calc(1.5 * var(--slider-image-height) + 2 * 3.2em);
+  max-width: calc(1.5 * var(--slider-image-height) + 2 * var(--slider-arrow-width));
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: repeat(2, auto);
   align-items: center;
   gap: 1.2em 0.6em;
   height: min-content;
+  margin: 0 auto;
 }
 
 .slider-images {
@@ -197,7 +199,7 @@ li {
 .slider-arrow {
   border: none;
   background: none;
-  width: 3.2em;
+  width: var(--slider-arrow-width);
   cursor: pointer;
 }
 
@@ -240,6 +242,10 @@ li {
   margin-bottom: 1.6em;
 }
 
+.location img {
+  max-width: 100%;
+}
+
 .location p {
   margin-bottom: 2em;
 }
@@ -262,4 +268,114 @@ footer {
   color: white;
   margin-left: 1em;
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+
+  nav {
+    margin-bottom: 0;
+    flex-direction: column;
+    gap: 2em 0;
+  }
+
+  .logo {
+    width: 10em;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  section {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  body {
+    text-align: center;
+  }
+
+  .apartment,
+  .location {
+    display: block;
+  }
+
+  .apartment-info {
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  :root {
+    --slider-image-height: 200px;
+    --slider-arrow-width: 2em;
+  }
+
+  .location {
+    margin-top: -2em;
+  }
+
+  .location h2 {
+    margin-bottom: 1em;
+  }
+
+  .location img {
+    margin-bottom: 2em;
+  }
+
+  .location p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #reservation-button {
+    margin-bottom: 2em;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 3.5em 0;
+  }
+
+  .footer-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em 0;
+  }
+}
+
+@media screen and (max-width: 519px) {
+  :root {
+    --slider-image-height: 150px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  :root {
+    --slider-image-height: 250px;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  section {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  .location {
+    margin-top: -3.5em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  :root {
+    --slider-image-height: 400px;
+  }
 }
