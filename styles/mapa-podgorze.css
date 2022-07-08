@@ -46,7 +46,7 @@ body {
 }
 
 section {
-  padding: 8em 2em;
+  padding: 5em 2em;
 }
 
 ul {
@@ -80,7 +80,7 @@ a:hover {
 nav {
   display: flex;
   margin-top: 2em;
-  margin-bottom: 5em;
+  margin-bottom: 2.6em;
   padding: 0 2em;
   justify-content: space-between;
   align-items: center;
@@ -123,10 +123,12 @@ li {
 /* apartment */
 
 .apartment {
+  width: 100%;
   margin: 0 auto;
   padding: 3em unset;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 0 2.3em;
 }
 
@@ -168,7 +170,6 @@ li {
   align-items: center;
   gap: 1.2em 0.6em;
   height: min-content;
-  margin: 0 auto;
 }
 
 .slider-images {
@@ -311,6 +312,10 @@ footer {
     margin-right: auto;
   }
 
+  .slider {
+    margin: 0 auto;
+  }
+
   :root {
     --slider-image-height: 200px;
     --slider-arrow-width: 2em;
@@ -355,7 +360,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 520px) and (max-width: 999px) {
   :root {
     --slider-image-height: 250px;
   }
