@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/mapa-podgorze.css" />
+    <script defer src="/libs/gsap.min.js"></script>
+    <script defer src="/scripts/photoCaraousel.js"></script>
+    <title>MaPa Pogórze</title>
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="/assets/icons/logo.svg" alt="MaPartments logo" />
+      <ul>
+        <li><a class="nav-link" href="#apartamenty">apatamenty</a></li>
+        <li><a class="nav-link nav-link-highlight" href="#kontakt">kontakt</a></li>
+      </ul>
+    </nav>
+    <section class="apartment">
+      <div>
+        <h2>MaPa Kazimierz</h2>
+        <ul>
+          <li><img src="/assets/icons/distance.svg" alt="kierunek" />1.1 km od Rynku Głównego</li>
+          <li><img src="/assets/icons/kitchen.svg" alt="nóż" />wyposażona kuchnia</li>
+          <li><img src="/assets/icons/wifi.svg" alt="wifi" />dostęp do wifi i Netflix</li>
+          <li><img src="/assets/icons/person.svg" alt="osoba" />do 4 dorosłych + 2 dzieci</li>
+        </ul>
+        <button id="reservation-button">rezerwacja</button>
+      </div>
+      <div class="apartment-photo-container">
+        <button id="previous-button"><img src="/assets/icons/previous-button.svg" alt="strzałka do tyłu" /></button>
+        <div class="image-window">
+          <img src="/assets/photos/mapa-podgorze/1.jpg" alt="" />
+          <img src="/assets/photos/mapa-podgorze/2.jpg" alt="" />
+        </div>
+        <button id="next-button"><img src="/assets/icons/next-button.svg" alt="strzałka do przodu" /></button>
+        <div class="image-indicators"> <button class="indicator indicator--active"></button><button class="indicator"></button class="indicator"><button class="indicator"></button><button class="indicator"></button> </div>
+      </div>
+    </section>
+    <section>
+      <h2>Lokalizacja</h2>
+      <img src="/assets/photos/podgórze.jpg" alt="kościół" />
+      <div>
+        <p>Kazimierz to wyjątkowa dzielnica nawet na skalę tak niesamowitego miasta jakim jest Kraków. Jej bogata, a zarazem tragiczna historia sprawiła, że powstało miejsce o unikalnej atmosferze. Pełna pamiątek z czasów, gdy stanowiła żydowską enklawę, tętni życiem pełna małych sklepików, galerii, warsztatów, knajpek i wystawnych restauracji. Wkroczysz w jej serce zaledwie przechodząc na drugą stronę ulicy!</p>
+        <a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g274772-d282371-Reviews-Kazmierz_The_Former_Jewish_District-Krakow_Lesser_Poland_Province_Southern_Poland.html">O Kazimierzu na TripAdvisor</a>
+      </div>
+    </section>
+    <footer>
+      <img src="/assets/icons/logo-whte.svg" alt="białe logo MaPartments" />
+      <div class="footer-links-container">
+        <a href="/mapa-podgorze">MaPa Podgórze</a>
+        <a href="/mapa-kazimierz">MaPa Kazimierz</a>
+        <a target="_blank" href="https://github.com/oliwierzgorniak/mapartments">o stronie</a>
+      </div>
+    </footer>
+  </body>
+</html>
