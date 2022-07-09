@@ -160,6 +160,7 @@ li {
   padding: 0.7em 1.1em;
   cursor: pointer;
   font-weight: 500;
+  user-select: none;
 }
 
 #close-button {
@@ -193,6 +194,8 @@ li {
   background: var(--darker-white);
   padding: 1.5em 2em;
   position: relative;
+  opacity: 0;
+  border: 1px solid var(--dark-gray);
 }
 
 #reservation-modal li:first-child {

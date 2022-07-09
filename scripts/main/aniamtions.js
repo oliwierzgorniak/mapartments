@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const sections = document.querySelectorAll('section');
 
 sections.forEach(section => {
+  if (section.classList.contains('apartments')) return;
   gsap.fromTo(
     section.children,
     { y: '+=100', opacity: 0 },
