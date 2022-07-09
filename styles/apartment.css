@@ -258,7 +258,7 @@ li {
 
 .slider-indicators {
   display: flex;
-  gap: 0 0.6em;
+  gap: 0;
   grid-row: 2/3;
   grid-column: 1/4;
   justify-self: center;
@@ -266,12 +266,18 @@ li {
 
 .indicator {
   border: none;
-  background: var(--gray);
-  height: 0.35em;
-  width: 1.2em;
+  background: none;
+  padding: 0.4em 0.5em;
+  cursor: pointer;
 }
 
-.indicator--active {
+.indicator div {
+  width: 1.2em;
+  height: 0.45em;
+  background: var(--gray);
+}
+
+.indicator--active div {
   background: var(--dark-gray);
 }
 
