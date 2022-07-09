@@ -11,7 +11,7 @@ const apartments = [
     wifi: 'dostęp do wifi i Netflix',
     capacity: 'do 4 osób',
     link: '/mapa-podgorze',
-    img: 'mapa-podgorze.jpg',
+    img: ['/assets/photos/mapa-podgorze-2000.avif', '/assets/photos/mapa-podgorze-2000.jpg', '/assets/photos/mapa-podgorze-800.avif', '/assets/photos/mapa-podgorze-800.jpg', '/assets/photos/mapa-podgorze-270.avif', '/assets/photos/mapa-podgorze-270.jpg', '/assets/photos/mapa-podgorze-800.jpg'],
   },
   {
     name: 'MaPa Kazimierz',
@@ -19,8 +19,8 @@ const apartments = [
     kitchen: 'wyposażona kuchnia',
     wifi: 'dostęp do wifi',
     capacity: 'do 4 dorosłych + 2 dzieci',
-    link: '/mapa-kazmierz',
-    img: 'mapa-kazimierz.jpg',
+    link: '/mapa-kazimierz',
+    img: ['/assets/photos/mapa-kazimierz-2000.avif', '/assets/photos/mapa-kazimierz-2000.jpg', '/assets/photos/mapa-kazimierz-800.avif', '/assets/photos/mapa-kazimierz-800.jpg', '/assets/photos/mapa-kazimierz-270.avif', '/assets/photos/mapa-kazimierz-270.jpg', '/assets/photos/mapa-kazimierz-800.jpg'],
   },
 ];
 
@@ -30,7 +30,8 @@ function chnageApartment(index) {
 
   let card = document.querySelector('.apartments-card');
   gsap.to(card, { opacity: 0, x: -400, duration: ANIMATION_DURATION, ease: 'easeIn' });
-  gsap.to(card, { opacity: 1, x: '2.8vw', duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeOut' });
+  const x = window.innerWidth < 849 ? 0 : '2.8vw';
+  gsap.to(card, { opacity: 1, x: x, duration: ANIMATION_DURATION, delay: ANIMATION_DURATION, ease: 'easeOut' });
 
   let img = document.querySelector('.apartments-image');
   gsap.to(img, { opacity: 0, y: -400, duration: ANIMATION_DURATION, ease: 'easeIn' });
@@ -69,8 +70,16 @@ function changeApartmentData() {
   link.href = apartments[activeIndex].link;
 
   // image
-  let img = document.querySelector('.apartments-image');
-  img.src = '/assets/photos/' + apartments[activeIndex].img;
+  let pic = document.querySelector('.apartments picture');
+  for (let i = 0; i < pic.children.length; i++) {
+    let child = pic.children[i];
+
+    if (child.nodeName === 'SOURCE') {
+      child.srcset = apartments[activeIndex].img[i];
+    } else if (child.nodeName === 'IMG') {
+      child.src = apartments[activeIndex].img[i];
+    }
+  }
 }
 
 // listeners

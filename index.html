@@ -21,18 +21,28 @@
     <section>
       <header>
         <a href="/">
-          <img class="logo" src="assets/icons/logo.svg" alt="MaPartments logo" />
+          <img class="logo" src="/assets/icons/logo.svg" alt="MaPartments logo" />
         </a>
         <h1>apartamenty dla <span>Ciebie</span></h1>
       </header>
       <div class="landing-slider">
-        <img src="assets/photos/landing-slider.jpg" alt="zdjęcia apartamentów">
+        <picture>
+          <source srcset="/assets/photos/landing-slider.avif" type="image/avif">
+          <source srcset="/assets/photos/landing-slider.jpg" type="image/jpeg">
+          <img src="/assets/photos/landing-slider.jpg" alt="zdjęcia apartamentów">
+        </picture>
       </div>
     </section>
     <section class="locations">
       <h2>Lokalizacje apartamentów</h2>
       <div class="location">
-        <img src="assets/photos/podgórze.jpg" alt="zdjęcie podgórze" />
+            <picture>
+              <source media="(max-width: 2999px)" srcset="/assets/photos/podgorze-487.avif" type="image/avif">
+              <source media="(max-width: 2999px)" srcset="/assets/photos/podgorze-487.jpg" type="image/jpeg">
+              <source media="(min-width: 3000px)" srcset="/assets/photos/podgorze-840.avif" type="image/avif">
+              <source media="(min-width: 3000px)" srcset="/assets/photos/podgorze-840.jpg" type="image/jpeg">
+              <img lazy src="/assets/photos/podgorze-487.jpg" alt="kościół" />
+            </picture>
         <div class="location-text-container">
           <h3>Podgórze</h3>
           <p>
@@ -45,7 +55,13 @@
         </div>
       </div>
       <div class="location">
-        <img src="assets/photos/kazimierz.jpg" alt="zdjęcie kazimierz" />
+            <picture>
+              <source media="(max-width: 2999px)" srcset="/assets/photos/kazimierz-487.avif" type="image/avif">
+              <source media="(max-width: 2999px)" srcset="/assets/photos/kazimierz-487.jpg" type="image/jpeg">
+              <source media="(min-width: 3000px)" srcset="/assets/photos/kazimierz-840.avif" type="image/avif">
+              <source media="(min-width: 3000px)" srcset="/assets/photos/kazimierz-840.jpg" type="image/jpeg">
+              <img lazy src="/assets/photos/kazimierz-487.jpg" alt="plac" />
+            </picture>
         <div class="location-text-container">
           <h3>Kazimierz</h3>
           <p>
@@ -63,17 +79,34 @@
         <div id="active-apartment-card" class="apartments-card">
           <h3 id="apartment-name">MaPa Podgórze</h3>
           <ul>
-            <li><img src="assets/icons/distance.svg" alt="ikonka odległości" /> <span id="apartment-distance">2.9km od Rynku Głównego</span> </li>
-            <li><img src="assets/icons/kitchen.svg" alt="ikonka kuchni" /> <span id="apartment-kitchen">wyposażona kuchnia</span></li>
-            <li><img src="assets/icons/wifi.svg" alt="ikonka wifi" /> <span id="apartment-wifi">dostęp do wifi i Netflix</span></li>
-            <li><img src="assets/icons/person.svg" alt="ikonka osób" /><span id="apartment-capacity">do 4 osób</span></li>
+            <li><img lazy src="assets/icons/distance.svg" alt="ikonka odległości" /> <span id="apartment-distance">2.9km od Rynku Głównego</span> </li>
+            <li><img lazy src="assets/icons/kitchen.svg" alt="ikonka kuchni" /> <span id="apartment-kitchen">wyposażona kuchnia</span></li>
+            <li><img lazy src="assets/icons/wifi.svg" alt="ikonka wifi" /> <span id="apartment-wifi">dostęp do wifi i Netflix</span></li>
+            <li><img lazy src="assets/icons/person.svg" alt="ikonka osób" /><span id="apartment-capacity">do 4 osób</span></li>
           </ul>
           <a id="apartment-link" href="/mapa-podgorze">więcej informacji</a>
         </div>
-      <img class="apartments-image" src="./assets/photos/mapa-podgorze.jpg" alt="apartament MaPa Kazmierze" />
+            <picture>
+              <source media="(min-width: 2000px)" srcset="/assets/photos/mapa-podgorze-2000.avif" type="image/avif">
+              <source media="(min-width: 2000px)" srcset="/assets/photos/mapa-podgorze-2000.jpg" type="image/jpeg">
+              <source media="(min-width: 800px)" srcset="/assets/photos/mapa-podgorze-800.avif" type="image/avif">
+              <source media="(min-width: 800px)" srcset="/assets/photos/mapa-podgorze-800.jpg" type="image/jpeg">
+              <source srcset="/assets/photos/mapa-podgorze-270.avif" type="image/avif">
+              <source srcset="/assets/photos/mapa-podgorze-270.jpg" type="image/jpeg">
+              <img class="apartments-image" src="/assets/photos/mapa-podgorze-800.jpg" alt="łóżko" />
+            </picture>
+            <picture>
+              <source media="(min-width: 2000px)" srcset="/assets/photos/mapa-kazimierz-2000.avif" type="image/avif">
+              <source media="(min-width: 2000px)" srcset="/assets/photos/mapa-kazimierz-2000.jpg" type="image/jpeg">
+              <source media="(min-width: 800px)" srcset="/assets/photos/mapa-kazimierz-800.avif" type="image/avif">
+              <source media="(min-width: 800px)" srcset="/assets/photos/mapa-kazimierz-800.jpg" type="image/jpeg">
+              <source srcset="/assets/photos/mapa-kazimierz-270.avif" type="image/avif">
+              <source srcset="/assets/photos/mapa-kazimierz-270.jpg" type="image/jpeg">
+              <img style="width: 0px;" src="/assets/photos/mapa-kazimierz-800.jpg" alt="łóżko" />
+            </picture>
       <div class="apartments-controls">
         <button id="apartments-previous" class="apartments-arrow">
-          <img src="assets/icons/arrow-up.svg" alt="strałka do góry" />
+          <img  src="assets/icons/arrow-up.svg" alt="strałka do góry" />
         </button>
         <div class="apartments-dots">
           <button class="dot dot-active" data-index="0"></button>
@@ -88,7 +121,7 @@
       <h2>Zadowoleni goście</h2>
       <div class="reviews-container">
         <div class="review">
-          <img src="assets/photos/avatar1.svg" alt="avatar1" />
+          <img lazy src="/assets/photos/avatar1.svg" alt="avatar 1" />
           <h3>Sabina</h3>
           <p>
             Serdecznie polecam, apartament jest najwyższej jakości, czysto i pełne wyposażenie. Kontakt z właścicielem
@@ -97,7 +130,7 @@
           </p>
         </div>
         <div class="review">
-          <img src="assets/photos/avatar2.svg" alt="avatar1" />
+          <img  src="/assets/photos/avatar2.svg" alt="avatar 2" />
           <h3>Monika</h3>
           <p>
             Bardzo komfortowy i nowoczesny apartament. Wystarczająca przestrzeń dla rodziny 4-osobowej. Bardzo dobry
@@ -105,7 +138,7 @@
           </p>
         </div>
         <div class="review">
-          <img src="assets/photos/avatar3.svg" alt="avatar1" />
+          <img src="/assets/photos/avatar3.svg" alt="avatar 3" />
           <h3>Iwona</h3>
           <p>
             Mimo późnego przyjazdu (1:20) odbiór kluczy nie stanowił żadnego problemu. Świetna lokalizacja, bardzo
@@ -129,7 +162,15 @@
           wyjazd służbowy, czy kilkudniowy pobyt ze zwiedzaniem naszego wyjątkowego miasta!
         </p>
       </div>
-      <img src="assets/photos/furnishings.jpg" alt="kuchnia" />
+            <picture>
+              <source media="(min-width: 2000px)" srcset="/assets/photos/furnishings-2000.avif" type="image/avif">
+              <source media="(min-width: 2000px)" srcset="/assets/photos/furnishings-2000.jpg" type="image/jpeg">
+              <source media="(min-width: 740px)" srcset="/assets/photos/furnishings-1000.avif" type="image/avif">
+              <source media="(min-width: 740px)" srcset="/assets/photos/furnishings-1000.jpg" type="image/jpeg">
+              <source srcset="/assets/photos/furnishings-380.avif" type="image/avif">
+              <source srcset="/assets/photos/furnishings-380.jpg" type="image/jpeg">
+              <img lazy class="apartments-image" src="/assets/photos/furnishings-1000.jpg" alt="kuchnia" />
+            </picture>
     </section>
     <section id="kontakt" class="contact">
       <h2>Kontakt i rezerwacje bezpośrednie</h2>
@@ -149,7 +190,7 @@
       </svg>
     </section>
     <footer>
-      <img src="assets/icons/logo-whte.svg" alt="białe logo MaPartments">
+      <img lazy src="assets/icons/logo-whte.svg" alt="białe logo MaPartments">
       <div class="footer-links-container">
         <a href="/mapa-podgorze">MaPa Podgórze</a>
         <a href="/mapa-kazimierz">MaPa Kazimierz</a>

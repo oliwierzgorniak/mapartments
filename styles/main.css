@@ -27,6 +27,7 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -37,7 +38,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
   background: var(--darker-white);
   font-weight: 400;
   overflow-x: hidden;
@@ -46,7 +46,7 @@ body {
 /* nav */
 nav {
   display: flex;
-  margin: 2vw var(--screen-padding-x) 0 var(--screen-padding-x);
+  margin: 2em var(--screen-padding-x) 0 var(--screen-padding-x);
   justify-content: flex-end;
 }
 
@@ -101,6 +101,7 @@ h1 {
 
 h1 span {
   color: var(--gold);
+  font-family: 'Playfair Display', serif;
 }
 
 .logo {
@@ -120,6 +121,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .landing-slider {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  height: 320px;
 }
 .landing-slider img {
   transform: translate3d(0, 0, 0);
@@ -210,8 +212,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /* https://teamtreehouse.com/community/local-anchor-links-with-padding */
 .apartments-anchor {
   position: absolute;
-  top: -3em;
-  width: 3em;
+  top: -5em;
+  width: 5em;
 }
 
 .apartments-card {
@@ -262,7 +264,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 0.8em 1em;
   font-size: 1.6rem;
   font-weight: 500;
-  /* transition: all 0.4s ease-out; */
+  transition: all 0.4s ease-out;
 }
 
 .apartments a:hover {
@@ -684,5 +686,20 @@ h2 {
 @media screen and (max-width: 400px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 33px;
+  }
+
+  .location {
+    max-width: 2200px;
+  }
+
+  .location img {
+    max-width: 1000px;
+    min-width: 800px;
   }
 }

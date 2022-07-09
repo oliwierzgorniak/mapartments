@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/mapa-podgorze.css" />
-    <script defer src="/libs/gsap.min.js"></script>
     <script defer src="/scripts/apartment/photoSlider.js"></script>
+    <script defer src="/scripts/apartment/reservationModal.js"></script>
     <title>MaPa Pogórze</title>
   </head>
   <body>
@@ -21,53 +21,191 @@
     </nav>
     <section class="apartment">
       <div>
-        <h2>MaPa Kazimierz</h2>
+        <h2>MaPa Podgórze</h2>
         <ul class="apartment-info">
-          <li><img src="/assets/icons/distance.svg" alt="kierunek" />1.1 km od Rynku Głównego</li>
+          <li><img src="/assets/icons/distance.svg" alt="kierunek" />2.9 km od Rynku Głównego</li>
           <li><img src="/assets/icons/kitchen.svg" alt="nóż" />wyposażona kuchnia</li>
           <li><img src="/assets/icons/wifi.svg" alt="wifi" />dostęp do wifi i Netflix</li>
           <li><img src="/assets/icons/person.svg" alt="osoba" />do 4 dorosłych + 2 dzieci</li>
         </ul>
-
         <button id="reservation-button">rezerwacja</button>
-        <div class="reservation-modal">
-          <ul>
-            <li>Telefon: </br><span>+48 795 379 081</span></li>
-            <li>Email: </br><span>biuro@mapartments.krakow.pl</span></li>
-          </ul>
+        <div id="reservation-modal">
+          <div class="reservation-modal-inner">
+            <ul>
+              <li>Telefon: </br><span>+48 795 379 081</span></li>
+              <li>Email: </br><span>biuro@mapartments.krakow.pl</span></li>
+            </ul>
+            <button id="close-button">
+              <img src="/assets/icons/close.svg" alt="ikonka zamknięcia">
+            </button>
+          </div>
         </div>
       </div>
       <div class="slider">
         <button id="prev-button" class="slider-arrow"><img src="/assets/icons/previous-button.svg" alt="strzałka do tyłu" /></button>
         <div class="slider-images">
           <div class="slide">
-            <img class="caraousel-photo" src="/assets/photos/mapa-podgorze/1.jpg" alt="" />
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/1-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/1-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/1-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/1-600.jpg" type="image/jpeg">
+              <img class="caraousel-photo" src="/assets/photos/mapa-podgorze/1-600.jpg" alt="zlew"/>
+            </picture>
           </div>
           <div class="slide">
-            <img class="caraousel-photo" src="/assets/photos/mapa-podgorze/7.jpg" alt="" />
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/2-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/2-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/2-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/2-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/2-600.jpg" alt="łóżko" />
+            </picture>
           </div>
           <div class="slide">
-            <img class="caraousel-photo" src="/assets/photos/mapa-podgorze/3.jpg" alt="" />
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/3-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/3-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/3-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/3-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/3-600.jpg" alt="grafika na ścianie" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/4-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/4-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/4-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/4-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/4-600.jpg" alt="przejście" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/5-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/5-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/5-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/5-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/5-600.jpg" alt="salon" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/6-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/6-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/6-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/6-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/6-600.jpg" alt="łazienka" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/7-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/7-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/7-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/7-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/7-600.jpg" alt="toaleta" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/8-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/8-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/8-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/8-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/8-600.jpg" alt="umywalka" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/9-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/9-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/9-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/9-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/9-600.jpg" alt="prysznic" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/10-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/10-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/10-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/10-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/10-600.jpg" alt="salon" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/11-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/11-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/11-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/11-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/11-600.jpg" alt="kanapa" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/12-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/12-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/12-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/12-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/12-600.jpg" alt="stół" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/13-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/13-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/13-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/13-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/13-600.jpg" alt="kuchnia" />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/14-200.avif" type="image/avif">
+              <source media="(max-width: 519px)" srcset="/assets/photos/mapa-podgorze/14-200.jpg" type="image/jpeg">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/14-600.avif" type="image/avif">
+              <source media="(min-width: 520px)" srcset="/assets/photos/mapa-podgorze/14-600.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/mapa-podgorze/14-600.jpg" alt="miejsce na zewnątrz" />
+            </picture>
           </div>
         </div>
-        <button id="next-button" class="slider-arrow"><img src="/assets/icons/next-button.svg" alt="strzałka do przodu" /></button>
+        <button id="next-button" class="slider-arrow"><img lazy src="/assets/icons/next-button.svg" alt="strzałka do przodu" /></button>
         <div class="slider-indicators">
           <button data-index="0" class="indicator indicator--active"></button>
           <button data-index="1" class="indicator"></button>
           <button data-index="2" class="indicator"></button>
+          <button data-index="3" class="indicator"></button>
+          <button data-index="4" class="indicator"></button>
+          <button data-index="5" class="indicator"></button>
+          <button data-index="6" class="indicator"></button>
+          <button data-index="7" class="indicator"></button>
+          <button data-index="8" class="indicator"></button>
+          <button data-index="9" class="indicator"></button>
+          <button data-index="10" class="indicator"></button>
+          <button data-index="11" class="indicator"></button>
+          <button data-index="12" class="indicator"></button>
+          <button data-index="13" class="indicator"></button>
         </div>
       </div>
     </section>
     <section class="location">
       <h2>Lokalizacja</h2>
-      <img src="/assets/photos/podgórze.jpg" alt="kościół" />
+            <picture>
+              <source media="(max-width: 2999px)" srcset="/assets/photos/podgorze-487.avif" type="image/avif">
+              <source media="(max-width: 2999px)" srcset="/assets/photos/podgorze-487.jpg" type="image/jpeg">
+              <source media="(min-width: 3000px)" srcset="/assets/photos/podgorze-840.avif" type="image/avif">
+              <source media="(min-width: 3000px)" srcset="/assets/photos/podgorze-840.jpg" type="image/jpeg">
+              <img lazy class="caraousel-photo" src="/assets/photos/podgorze-487.jpg" alt="plac" />
+            </picture>
       <div>
-        <p>Kazimierz to wyjątkowa dzielnica nawet na skalę tak niesamowitego miasta jakim jest Kraków. Jej bogata, a zarazem tragiczna historia sprawiła, że powstało miejsce o unikalnej atmosferze. Pełna pamiątek z czasów, gdy stanowiła żydowską enklawę, tętni życiem pełna małych sklepików, galerii, warsztatów, knajpek i wystawnych restauracji. Wkroczysz w jej serce zaledwie przechodząc na drugą stronę ulicy!</p>
-        <a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-g274772-d282371-Reviews-Kazmierz_The_Former_Jewish_District-Krakow_Lesser_Poland_Province_Southern_Poland.html">O Kazimierzu na TripAdvisor</a>
+        <p>Podgórze to wyjątkowe miejsce na mapie miasta. Stanowi wciąż cichą i spokojną enklawę pozwalającą odpocząć po dniu spędzonym w pracy i/lub w zgiełku Starego Miasta czy Kazimierza. Bogate we własną historię stanowi idealne miejsce startu „wypraw” do Centrum, na Wawel, do Sanktuarium Bożego Miłosierdza w Łagiewnikach, czy do unikatowej na światową skalę Kopalni Soli w Wieliczce! </p>
+        <a target="_blank" href="https://all.accor.com/pl/polska/magazine/one-hour-one-day-one-week/krakow-podgorze-miejsce-w-ktore-trzeba-sie-udac-4a68a.shtml">O Podgórzu</a>
       </div>
     </section>
     <footer>
-      <img src="/assets/icons/logo-whte.svg" alt="białe logo MaPartments" />
+      <img lazy src="/assets/icons/logo-whte.svg" alt="białe logo MaPartments" />
       <div class="footer-links-container">
         <a href="/mapa-podgorze">MaPa Podgórze</a>
         <a href="/mapa-kazimierz">MaPa Kazimierz</a>

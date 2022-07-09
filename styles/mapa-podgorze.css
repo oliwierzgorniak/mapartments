@@ -29,6 +29,7 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -39,7 +40,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
   background: var(--darker-white);
   font-weight: 400;
   overflow-x: hidden;
@@ -157,8 +157,56 @@ li {
   background: var(--gold);
   color: white;
   font-size: 1.4rem;
-  padding: 0.9em 1.3em;
+  padding: 0.7em 1.1em;
   cursor: pointer;
+  font-weight: 500;
+}
+
+#close-button {
+  background: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  top: 1em;
+  right: 1em;
+  width: 1.6em;
+  padding: 0.2em;
+}
+
+#close-button img {
+  width: 100%;
+}
+
+#reservation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: none;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 13;
+}
+
+.reservation-modal-inner {
+  background: var(--darker-white);
+  padding: 1.5em 2em;
+  position: relative;
+}
+
+#reservation-modal li:first-child {
+  margin-bottom: 1.8em;
+}
+
+#reservation-modal li {
+  line-height: 170%;
+  text-align: start;
+  font-size: 1.05rem;
+}
+
+#reservation-modal span {
+  color: var(--gold);
 }
 
 .slider {
@@ -356,6 +404,12 @@ footer {
 
 @media screen and (max-width: 519px) {
   :root {
+    --slider-image-height: 200px;
+  }
+}
+
+@media screen and (max-width: 349px) {
+  :root {
     --slider-image-height: 150px;
   }
 }
@@ -382,5 +436,19 @@ footer {
 @media screen and (min-width: 700px) {
   :root {
     --slider-image-height: 400px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  :root {
+    --slider-image-height: 600px;
+  }
+
+  html {
+    font-size: 30px;
+  }
+
+  .location img {
+    min-width: 25em;
   }
 }
