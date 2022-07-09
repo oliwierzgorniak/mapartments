@@ -87,7 +87,7 @@ nav {
 }
 
 .logo {
-  max-width: 16em;
+  max-width: 10em;
 }
 
 nav ul {
@@ -210,7 +210,7 @@ li {
   font-size: 1.05rem;
 }
 
-#reservation-modal span {
+#reservation-modal a {
   color: var(--gold);
 }
 
