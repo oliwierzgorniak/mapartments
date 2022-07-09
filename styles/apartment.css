@@ -417,6 +417,15 @@ footer {
   :root {
     --slider-image-height: 200px;
   }
+
+  .indicator {
+    padding: 0.3em;
+  }
+
+  .indicator div {
+    width: 0.8em;
+    height: 0.3em;
+  }
 }
 
 @media screen and (max-width: 349px) {

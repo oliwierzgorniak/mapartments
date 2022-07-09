@@ -538,10 +538,11 @@ h2 {
 
   .apartments-card {
     transform: translateX(0) translateY(-20px);
+    order: 2;
   }
 
   .apartments-image {
-    order: -1;
+    order: 1;
     width: 60vw;
     max-width: 400px;
   }
@@ -549,6 +550,7 @@ h2 {
   .apartments-controls {
     flex-direction: row;
     gap: 0 1.6em;
+    order: 3;
   }
 
   .apartments-arrow {
