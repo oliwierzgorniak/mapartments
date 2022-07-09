@@ -1,6 +1,6 @@
-## to do
+# Website showing apartments for rent in Krakow
 
-## resources
+## resources used in project
 
 - https://codepen.io/chriscoyier/details/EyxPPm
 - distance from openstreetmap.org
