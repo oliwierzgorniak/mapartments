@@ -161,6 +161,7 @@ li {
   cursor: pointer;
   font-weight: 500;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #close-button {
@@ -172,6 +173,7 @@ li {
   right: 1em;
   width: 1.6em;
   padding: 0.2em;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #close-button img {
