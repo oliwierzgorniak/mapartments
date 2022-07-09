@@ -1,4 +1,6 @@
-# Website showing apartments for rent in Krakow
+# Mapartments
+
+Website showing apartments for rent in Krakow
 
 ## resources used in project
 
