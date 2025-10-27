@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
+   version="1.1"
+   id="svg8">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <g
+       id="g850">
+      <circle
+         style="fill:#7A3F86;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:round;stroke-opacity:1"
+         id="path837"
+         cx="5"
+         cy="5"
+         r="4.9999995" />
+      <g
+         aria-label="S"
+         id="text841"
+         style="font-weight:bold;font-size:5.64444px;line-height:1.25;font-family:Lato;-inkscape-font-specification:'Lato Bold';stroke-width:0.264583">
+        <g
+           aria-label="M"
+           id="text15"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.62571px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0372117">
+          <path
+             d="m 4.8368543,5.3459813 q 0.047819,0.090011 0.087199,0.1884612 0.042193,0.095637 0.081573,0.194087 0.03938,-0.1040756 0.081573,-0.1997127 0.042193,-0.09845 0.090011,-0.1884612 L 6.3782989,3.0872587 q 0.022503,-0.042193 0.047818,-0.067509 0.025316,-0.025316 0.053444,-0.036567 0.030941,-0.011252 0.067509,-0.014064 0.036567,-0.00281 0.087198,-0.00281 H 7.2052783 V 7.0336943 H 6.5386316 V 4.4064877 q 0,-0.073134 0.00281,-0.1603327 0.00563,-0.087198 0.014064,-0.1772099 L 5.3262911,6.3754862 Q 5.2390926,6.5414446 5.0590699,6.5414446 H 4.9521814 q -0.1800227,0 -0.2672212,-0.1659584 L 3.4416783,4.0605065 q 0.00844,0.092824 0.014064,0.1828356 0.00563,0.087199 0.00563,0.1631456 V 7.0336943 H 2.7947216 V 2.9663059 h 0.5710096 q 0.050631,0 0.087198,0.00281 0.036567,0.00281 0.064696,0.014064 0.030941,0.011251 0.053444,0.036567 0.025316,0.025316 0.047818,0.067509 l 1.2179662,2.2587226 z"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:lato;-inkscape-font-specification:'lato Bold';fill:#ffffff;stroke-width:0.0372117"
+             id="path13" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
+   version="1.1"
+   id="svg8">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <g
+       id="g850">
+      <circle
+         style="fill:#005D74;fill-opacity:1;stroke:none;stroke-width:8;stroke-linejoin:round;stroke-opacity:1"
+         id="path837"
+         cx="5"
+         cy="5"
+         r="4.9999995" />
+    </g>
+  </g>
+  <g
+     aria-label="I"
+     id="text15"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.66729px;line-height:1.25;font-family:Lato;-inkscape-font-specification:Lato;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.141682">
+    <path
+       d="M 5.3825421,7.0487251 H 4.6174579 V 2.9512743 h 0.7650842 z"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Bold';fill:#ffffff;stroke-width:0.141682"
+       id="path17" />
+  </g>
+</svg>
