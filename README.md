@@ -1,11 +1,8 @@
 # Mapartments
-[Link](https://mapartments.krakow.pl/)
 
-## Description
-This website is used commercially for presenting Mapa apartments for rent in Krakow.
+This website was used commercially for presenting Mapa apartments for rent in Krakow. Built in html, css and js with gsap used for animations.
 
-## Technology
-The website was built in html, css and js with gsap, which is used for animations.
+[Link to website](https://mapartments.netlify.app/)
 
 ## resources used in project
 - https://codepen.io/chriscoyier/details/EyxPPm
